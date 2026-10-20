@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Lexend:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-atkinson: "Atkinson Hyperlegible", sans-serif;
+  --font-lexend: "Lexend", sans-serif;
+}
+
+/* Variables de Temas */
+:root {
+  --color-bg: #0a0502;
+  --color-bg-card: rgba(255, 255, 255, 0.03);
+  --color-bg-card-hover: rgba(255, 255, 255, 0.06);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.25);
+  --color-text-main: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  --color-text-dim: rgba(255, 255, 255, 0.4);
+  --color-accent: #ff5500;
+  --color-accent-hover: #ff7722;
+  --color-accent-glow: rgba(255, 85, 0, 0.25);
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Tema: Azul Océano / Medianoche */
+.theme-ocean {
+  --color-bg: #050b14;
+  --color-bg-card: rgba(14, 165, 233, 0.04);
+  --color-bg-card-hover: rgba(14, 165, 233, 0.08);
+  --color-border: rgba(56, 189, 248, 0.15);
+  --color-border-hover: rgba(56, 189, 248, 0.35);
+  --color-text-main: #f0f9ff;
+  --color-text-muted: #93c5fd;
+  --color-text-dim: #60a5fa80;
+  --color-accent: #0284c7;
+  --color-accent-hover: #0369a1;
+  --color-accent-glow: rgba(2, 132, 199, 0.3);
+}
+
+/* Tema: Bosque Esmeralda */
+.theme-forest {
+  --color-bg: #03140c;
+  --color-bg-card: rgba(16, 185, 129, 0.04);
+  --color-bg-card-hover: rgba(16, 185, 129, 0.08);
+  --color-border: rgba(52, 211, 153, 0.15);
+  --color-border-hover: rgba(52, 211, 153, 0.35);
+  --color-text-main: #ecfdf5;
+  --color-text-muted: #a7f3d0;
+  --color-text-dim: #6ee7b780;
+  --color-accent: #059669;
+  --color-accent-hover: #047857;
+  --color-accent-glow: rgba(5, 150, 105, 0.3);
+}
+
+/* Tema: Cíber Amatista / Violeta */
+.theme-amethyst {
+  --color-bg: #0d0617;
+  --color-bg-card: rgba(168, 85, 247, 0.04);
+  --color-bg-card-hover: rgba(168, 85, 247, 0.08);
+  --color-border: rgba(192, 132, 252, 0.15);
+  --color-border-hover: rgba(192, 132, 252, 0.35);
+  --color-text-main: #faf5ff;
+  --color-text-muted: #d8b4fe;
+  --color-text-dim: #c084fc80;
+  --color-accent: #9333ea;
+  --color-accent-hover: #7e22ce;
+  --color-accent-glow: rgba(147, 51, 234, 0.3);
+}
+
+/* Tema: Alto Contraste Negro & Amarillo (WCAG AAA) */
+.theme-highcontrast {
+  --color-bg: #000000;
+  --color-bg-card: #0a0a0a;
+  --color-bg-card-hover: #171717;
+  --color-border: #facc15;
+  --color-border-hover: #ffffff;
+  --color-text-main: #ffffff;
+  --color-text-muted: #fef08a;
+  --color-text-dim: #e5e5e5;
+  --color-accent: #facc15;
+  --color-accent-hover: #eab308;
+  --color-accent-glow: rgba(250, 204, 21, 0.4);
+}
+.theme-highcontrast button, 
+.theme-highcontrast div[role="button"],
+.theme-highcontrast .border {
+  border-width: 2px !important;
+}
+
+/* Tema: Modo Crema / Marfil Claro */
+.theme-cream {
+  --color-bg: #fcf9f2;
+  --color-bg-card: #ffffff;
+  --color-bg-card-hover: #f5f0e6;
+  --color-border: rgba(0, 0, 0, 0.12);
+  --color-border-hover: rgba(0, 0, 0, 0.25);
+  --color-text-main: #171717;
+  --color-text-muted: #525252;
+  --color-text-dim: #737373;
+  --color-accent: #ea580c;
+  --color-accent-hover: #c2410c;
+  --color-accent-glow: rgba(234, 88, 12, 0.2);
+}
+
+/* Modos de Tipografía */
+.font-mode-editorial {
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+.font-mode-modern {
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+.font-mode-accessible {
+  --font-heading: "Atkinson Hyperlegible", sans-serif;
+  --font-body: "Atkinson Hyperlegible", sans-serif;
+}
+
+.font-mode-dyslexic {
+  --font-heading: "Lexend", sans-serif;
+  --font-body: "Lexend", sans-serif;
+}
+
+.font-mode-mono {
+  --font-heading: "JetBrains Mono", monospace;
+  --font-body: "JetBrains Mono", monospace;
+}
+
+/* Escalas de tamaño de texto */
+.text-scale-normal {
+  font-size: 100%;
+}
+.text-scale-large {
+  font-size: 112%;
+}
+.text-scale-xlarge {
+  font-size: 125%;
+}
+
+/* Mayor interlineado y espacio entre letras */
+.accessible-spacing {
+  letter-spacing: 0.04em !important;
+  line-height: 1.75 !important;
+}
+
+/* Reducción de movimiento */
+.reduce-motion * {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, .font-heading-dynamic {
+  font-family: var(--font-heading);
+}

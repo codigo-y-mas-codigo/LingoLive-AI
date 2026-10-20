@@ -1,0 +1,5 @@
+{
+  "name": "LingoLive AI",
+  "description": "Compañero de IA conversacional en tiempo real para la práctica inmersiva del aprendizaje de idiomas utilizando Gemini 2.5 Native Audio.",
+  "requestFramePermissions": ["microphone"]
+}
